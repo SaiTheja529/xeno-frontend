@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 10% 20%, rgba(249, 115, 22, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.08), transparent 22%),
+    linear-gradient(145deg, #020617, #0b1224 45%, #020617);
+  min-height: 100vh;
+}
+
+.card {
+  @apply rounded-2xl bg-slate-900/70 border border-slate-800 shadow-card backdrop-blur;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-slate-100 tracking-tight;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-amber-400 text-slate-900 hover:bg-amber-300 focus-visible:ring-2 focus-visible:ring-amber-200;
+}
+
+.btn-secondary {
+  @apply bg-slate-800 text-slate-100 hover:bg-slate-700 border border-slate-700;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400;
+}
+
+.label {
+  @apply text-xs font-semibold uppercase tracking-wide text-slate-400;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-slate-800 px-3 py-1 text-xs font-semibold text-slate-200;
+}
+
+.table {
+  @apply w-full border-separate border-spacing-y-2 text-sm;
+}
+
+.table thead tr {
+  @apply text-slate-400;
+}
+
+.table tbody tr {
+  @apply bg-slate-900/60 border border-slate-800 rounded-xl;
+}
+
+.table td,
+.table th {
+  @apply px-4 py-3 text-left;
+}
